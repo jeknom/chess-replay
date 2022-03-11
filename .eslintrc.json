@@ -20,8 +20,16 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+        "react/jsx-filename-extension": [2, { "extensions": [".tsx", ".jsx"] }],
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
-        "import/extensions": [2, "always"]
+        "import/extensions": [2, "never"],
+        "jsx-quotes": [2, "prefer-single"]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+          }
     }
 }
