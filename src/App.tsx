@@ -4,13 +4,11 @@ import { ThemeProvider } from '@mui/material/styles';
 import {
   Container, GlobalStyles,
 } from '@mui/material';
-import { Setup, NotFound } from '@components';
+import { Setup, Replay, NotFound } from '@components';
 import { theme, globalStyle, viewState } from '@constants';
 
 const App: FC = () => {
   const [view, setView] = useState<ViewState>(viewState.SETUP);
-  // Will add the component which consumes game data later.
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [gameData, setGameData] = useState<GameData>();
 
   const handleSetGameData = (data: GameData) => {
@@ -28,6 +26,7 @@ const App: FC = () => {
       case viewState.SETUP:
         return <Setup onSetGameData={handleSetGameData} />;
       case viewState.REPLAY:
+        return <Replay gameData={gameData} boardDimensions={8} cellSizePx={70} />;
       default:
         return <NotFound onBackToSetup={handleRedirectBackToSetup} />;
     }

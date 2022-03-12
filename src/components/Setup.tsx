@@ -82,7 +82,7 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
             endAdornment: (
               <InputAdornment position='end'>
                 <LoadingContainer size={20} isLoading={isLoading}>
-                  <IconButton onClick={handleFetchGameData} disabled={url === ''}>
+                  <IconButton color='primary' onClick={handleFetchGameData} disabled={url === ''}>
                     <ChevronRight />
                   </IconButton>
                 </LoadingContainer>
