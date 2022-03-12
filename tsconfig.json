@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "tsbuild",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+        "@components": ["./components/index"],
+        "@utils": ["./utils"],
+        "@constants": ["./constants/index"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

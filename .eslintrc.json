@@ -5,7 +5,9 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -13,23 +15,44 @@
             "jsx": true
         },
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
     },
     "plugins": [
         "react",
+        "import",
         "@typescript-eslint"
     ],
     "rules": {
+        "no-console": 1,
+        "no-unused-vars": "off",
+        "no-use-before-define": "off",
+        "no-shadow": "off",
+        "jsx-quotes": [2, "prefer-single"],
+        "import/extensions": [2, "never"],
         "react/jsx-filename-extension": [2, { "extensions": [".tsx", ".jsx"] }],
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
-        "import/extensions": [2, "never"],
-        "jsx-quotes": [2, "prefer-single"]
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "@typescript-eslint/no-shadow": ["error"],
+        "@typescript-eslint/no-misused-promises": [
+            "error",
+            {
+              "checksVoidReturn": false
+            }
+          ]
+
     },
     "settings": {
+        "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
         "import/resolver": {
             "node": {
               "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            },
+            "typescript": {
+                "alwaysTryTypes": true
             }
-          }
+        }
     }
 }
