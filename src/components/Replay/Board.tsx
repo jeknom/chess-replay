@@ -15,7 +15,7 @@ interface BoardProps {
   dimensions: number;
   pieces: Piece[];
   history: Move[];
-  cellSizePx: number;
+  cellSizeRem: number;
 }
 
 const Board: FC<BoardProps> = ({
@@ -23,7 +23,7 @@ const Board: FC<BoardProps> = ({
   dimensions,
   pieces,
   history,
-  cellSizePx,
+  cellSizeRem,
 }) => {
   const boardAtGameStart = getBoardAsIfGameStarted(pieces, history);
   const boardWithVisuals = getBoardWithVisuals(boardAtGameStart);
@@ -56,7 +56,7 @@ const Board: FC<BoardProps> = ({
   }
 
   return (
-    <BoardGrid dimensions={dimensions} cellSizePx={cellSizePx}>
+    <BoardGrid dimensions={dimensions} cellSizeRem={cellSizeRem}>
       {boardCells}
     </BoardGrid>
   );

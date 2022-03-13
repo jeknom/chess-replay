@@ -4,7 +4,7 @@ export const isValidGameData = (data: object): data is GameData => 'name' in dat
   && 'board' in data
   && 'history' in data;
 
-const mapPieceIdToVisual = (id: string) => {
+const mapPieceIdToVisual = (id: string, alt: string) => {
   let pieceId = id;
 
   const match = id.match(/[a-z]{2}/);
@@ -39,7 +39,7 @@ const mapPieceIdToVisual = (id: string) => {
     case 'bp':
       return '♟︎';
     default:
-      return '?';
+      return alt;
   }
 };
 
@@ -49,7 +49,7 @@ export const getBoardWithVisuals = (board: Piece[]) => {
     const piece = board[i];
     boardWithVisuals.push({
       ...piece,
-      visual: mapPieceIdToVisual(piece.id),
+      visual: mapPieceIdToVisual(piece.id, piece.type),
     });
   }
 

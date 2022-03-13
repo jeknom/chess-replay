@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react';
-import { Box, Slider } from '@mui/material';
+import { Box, Button, Slider } from '@mui/material';
 import NotFound from '../NotFound';
 import Board from './Board';
+import Banner from './Banner';
 
 export interface ReplayProps {
   gameData?: GameData;
@@ -20,12 +21,20 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
   };
 
   return (
-    <>
-      <Box sx={{ maxWidth: 500, minWidth: 400 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        gap: 2,
+      }}
+    >
+      <Banner players={gameData.players} currentMove={currentMove} />
+      <Box sx={{ width: '95%' }}>
         <Slider
           value={currentMove}
           onChange={handleSliderChange}
-          valueLabelDisplay='auto'
           min={0}
           max={gameData.history.length}
         />
@@ -35,9 +44,10 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
         dimensions={gameData.size}
         pieces={gameData.board}
         history={gameData.history}
-        cellSizePx={70}
+        cellSizeRem={4.75}
       />
-    </>
+      <Button variant='outlined' onClick={onBackToSetup}>Back to setup</Button>
+    </Box>
   );
 };
 
