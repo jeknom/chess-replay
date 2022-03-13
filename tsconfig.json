@@ -3,7 +3,7 @@
     "outDir": "tsbuild",
     "module": "commonjs",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["es2021", "dom"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -13,11 +13,13 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
         "@components": ["./components/index"],
         "@utils": ["./utils"],
-        "@constants": ["./constants/index"]
+        "@constants": ["./constants/index"],
+        "@mock/*": ["../mock/*"]
     }
   },
   "exclude": ["node_modules"]

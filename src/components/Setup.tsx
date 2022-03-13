@@ -68,7 +68,7 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
       }}
     >
       <Typography variant='h5'>Chess replay</Typography>
-      <img src='/pieces/wn.svg' alt='White knight chess piece icon' width={100} height={100} />
+      <img src='/wn.svg' alt='White knight chess piece icon' width={100} height={100} />
       <InputLabel>Game data URL</InputLabel>
       <form onSubmit={handleFormSubmit}>
         <TextField

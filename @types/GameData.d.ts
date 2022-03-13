@@ -3,13 +3,13 @@ declare interface Pos {
   y: number;
 }
 
-declare interface History {
+declare interface Move {
   pieceId: string;
   fromPos: Pos;
   toPos: Pos;
 }
 
-declare interface Board {
+declare interface Piece {
   id: string;
   pos: Pos;
   type: string;
@@ -25,6 +25,11 @@ declare interface GameData {
   name: string;
   size: number;
   players: Players;
-  board: Board[];
-  history: History[];
+  board: Piece[];
+  history: Move[];
+}
+
+declare interface PieceWithVisual extends Piece {
+  visual: string;
+  isEaten: boolean;
 }

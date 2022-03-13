@@ -1,0 +1,41 @@
+{
+  "name": "Friendly pieces overlap",
+  "size": 8,
+  "players": {
+    "white": "Bob",
+    "black": "Marley"
+  },
+  "board": [
+    {
+      "id": "wp1",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "type": "pawn",
+      "team": "white"
+    },
+    {
+      "id": "wp2",
+      "pos": {
+        "x": 2,
+        "y": 2
+      },
+      "type": "pawn",
+      "team": "white"
+    }
+  ],
+  "history": [
+    {
+      "pieceId": "wp1",
+      "fromPos": {
+        "x": 0,
+        "y": 1
+      },
+      "toPos": {
+        "x": 2,
+        "y": 2
+      }
+    }
+  ]
+}
