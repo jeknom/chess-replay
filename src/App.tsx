@@ -26,7 +26,12 @@ const App: FC = () => {
       case viewState.SETUP:
         return <Setup onSetGameData={handleSetGameData} />;
       case viewState.REPLAY:
-        return <Replay gameData={gameData} boardDimensions={8} cellSizePx={70} />;
+        return (
+          <Replay
+            gameData={gameData}
+            onBackToSetup={handleRedirectBackToSetup}
+          />
+        );
       default:
         return <NotFound onBackToSetup={handleRedirectBackToSetup} />;
     }

@@ -7,6 +7,7 @@ declare interface Move {
   pieceId: string;
   fromPos: Pos;
   toPos: Pos;
+  remove?: Piece;
 }
 
 declare interface Piece {
@@ -31,5 +32,4 @@ declare interface GameData {
 
 declare interface PieceWithVisual extends Piece {
   visual: string;
-  isEaten: boolean;
 }
