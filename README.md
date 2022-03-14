@@ -2,11 +2,15 @@
 
 A react app to replay through a game of chess step by step.
 
+## Demo
+
+- Check out the live demo: [https://chess-replay.herokuapp.com/](https://chess-replay.herokuapp.com/)
+
 ## Note
 
 - This was built without templates such as create-react-app
 - Supports unconventional grid sizes
-- Non-standard chess pieces can be used (For visualization set the piece `type` property to your desired string or character)
+- Non-standard chess pieces can be used (for visualization set the piece `type` property to your desired string or character)
 
 ## Possible improvements
 
