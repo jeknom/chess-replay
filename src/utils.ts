@@ -4,7 +4,7 @@ export const isValidGameData = (data: object): data is GameData => 'name' in dat
   && 'board' in data
   && 'history' in data;
 
-const mapPieceIdToVisual = (id: string, alt: string) => {
+export const mapPieceIdToVisual = (id: string, alt: string) => {
   let pieceId = id;
 
   const match = id.match(/[a-z]{2}/);
@@ -86,6 +86,24 @@ export const getBoardForHistory = (
   }
 
   return boardClone;
+};
+
+export const getCapturedPiecesForHistory = (
+  history: Move[],
+  currentMove: number,
+) => {
+  const historyClone = [...history].reverse().slice(0, currentMove);
+  const capturedPieces: Piece[] = [];
+
+  for (let i = 0; i < historyClone.length; i += 1) {
+    const { remove } = historyClone[i];
+
+    if (remove !== undefined) {
+      capturedPieces.push(remove);
+    }
+  }
+
+  return capturedPieces;
 };
 
 export const getBoardAsIfGameStarted = (board: Piece[], history: Move[]) => {

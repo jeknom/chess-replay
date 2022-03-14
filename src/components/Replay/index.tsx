@@ -1,8 +1,10 @@
 import React, { FC, useState } from 'react';
 import { Box, Button, Slider } from '@mui/material';
+import { getCapturedPiecesForHistory } from '@utils';
 import NotFound from '../NotFound';
 import Board from './Board';
 import Banner from './Banner';
+import CapturedPieces from './CapturedPieces';
 
 export interface ReplayProps {
   gameData?: GameData;
@@ -15,6 +17,8 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
   if (!gameData) {
     return <NotFound onBackToSetup={onBackToSetup} />;
   }
+
+  const capturedPieces = getCapturedPiecesForHistory(gameData.history || [], currentMove);
 
   const handleSliderChange = (event: Event, newValue: number | number[]) => {
     setCurrentMove(newValue as number);
@@ -31,7 +35,7 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
       }}
     >
       <Banner players={gameData.players} currentMove={currentMove} />
-      <Box sx={{ width: '95%' }}>
+      <Box sx={{ width: '30rem' }}>
         <Slider
           value={currentMove}
           onChange={handleSliderChange}
@@ -39,13 +43,26 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
           max={gameData.history.length}
         />
       </Box>
-      <Board
-        currentMove={currentMove}
-        dimensions={gameData.size}
-        pieces={gameData.board}
-        history={gameData.history}
-        cellSizeRem={4.75}
-      />
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 4,
+        }}
+      >
+        <CapturedPieces
+          pieces={capturedPieces.filter((p) => p.team === 'black')}
+        />
+        <Board
+          currentMove={currentMove}
+          dimensions={gameData.size}
+          pieces={gameData.board}
+          history={gameData.history}
+          cellSizeRem={4.75}
+        />
+        <CapturedPieces
+          pieces={capturedPieces.filter((p) => p.team === 'white')}
+        />
+      </Box>
       <Button variant='outlined' onClick={onBackToSetup}>Back to setup</Button>
     </Box>
   );
