@@ -129,3 +129,9 @@ export const getPositionForIndex = (index: number, dimensions: number): Pos => (
   x: index % dimensions,
   y: index === 0 ? 0 : Math.floor(index / dimensions),
 });
+
+export const getLatestMoveFromHistory = (history: Move[], currentMove: number) => {
+  const historyClone = [...history].reverse().slice(0, currentMove);
+
+  return historyClone.length !== 0 ? historyClone[historyClone.length - 1] : null;
+};

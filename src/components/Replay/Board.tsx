@@ -1,11 +1,13 @@
+// We don't want to destructure MUI colors
+/* eslint-disable prefer-destructuring */
 import React, { FC, ReactNode } from 'react';
 import { Typography } from '@mui/material';
-import { amber } from '@mui/material/colors';
 import {
   getBoardWithVisuals,
   getBoardForHistory,
   getPositionForIndex,
   getBoardAsIfGameStarted,
+  getLatestMoveFromHistory,
 } from '@utils';
 import BoardGrid from './Grid';
 import BoardCell from './Cell';
@@ -28,10 +30,15 @@ const Board: FC<BoardProps> = ({
   const boardAtGameStart = getBoardAsIfGameStarted(pieces, history);
   const boardWithVisuals = getBoardWithVisuals(boardAtGameStart);
   const currentBoard = getBoardForHistory(boardWithVisuals, history, currentMove);
+  const latestMove = getLatestMoveFromHistory(history, currentMove);
   const boardCells: ReactNode[] = [];
 
   for (let pos = 0; pos < dimensions * dimensions; pos += 1) {
     const boardPosition = getPositionForIndex(pos, dimensions);
+    const isFromCell = boardPosition.x === latestMove?.fromPos.x
+      && boardPosition.y === latestMove?.fromPos.y;
+    const isToCell = boardPosition.x === latestMove?.toPos.x
+      && boardPosition.y === latestMove?.toPos.y;
     const isCellEven = pos % 2 === 0;
     const isRowEven = Math.floor(pos / dimensions) % 2 === 0;
     const useDark = !isRowEven ? isCellEven : !isCellEven;
@@ -48,7 +55,9 @@ const Board: FC<BoardProps> = ({
     boardCells.push(
       <BoardCell
         key={pos}
-        backgroundColor={useDark ? amber[800] : amber[600]}
+        isFromCell={isFromCell}
+        isToCell={isToCell}
+        useDark={useDark}
       >
         {visual}
       </BoardCell>,
