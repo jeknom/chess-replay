@@ -4,6 +4,7 @@ import { getCapturedPiecesForHistory } from '@utils';
 import NotFound from '../NotFound';
 import Board from './Board';
 import Banner from './Banner';
+import MoveMenu from './MoveMenu';
 import CapturedPieces from './CapturedPieces';
 
 export interface ReplayProps {
@@ -32,15 +33,30 @@ const Replay: FC<ReplayProps> = ({ gameData, onBackToSetup }) => {
         justifyContent: 'center',
         flexDirection: 'column',
         gap: 2,
+        marginTop: '7.5%',
+        marginBottom: 2,
       }}
     >
       <Banner players={gameData.players} currentMove={currentMove} />
-      <Box sx={{ width: '30rem' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '37.5rem',
+          gap: 2,
+        }}
+      >
         <Slider
           value={currentMove}
           onChange={handleSliderChange}
           min={0}
           max={gameData.history.length}
+        />
+        <MoveMenu
+          currentMove={currentMove}
+          moves={[...gameData.history].reverse()}
+          onMoveSelected={setCurrentMove}
         />
       </Box>
       <Box

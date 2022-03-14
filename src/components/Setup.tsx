@@ -57,12 +57,12 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
   return (
     <Paper
       sx={{
+        marginTop: '30vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        minWidth: 350,
-        minHeight: 300,
+        width: 350,
+        height: 300,
         padding: 2,
         gap: 2,
       }}

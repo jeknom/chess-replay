@@ -46,9 +46,7 @@ const Banner: FC<BannerProps> = ({ players, currentMove }) => (
       }}
     >
       <Typography variant='body1'>
-        Move
-        {' '}
-        {currentMove.toString()}
+        {`${currentMove === 0 ? 'Game start' : `Move ${currentMove}`}`}
       </Typography>
     </Box>
   </Box>

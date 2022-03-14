@@ -2,10 +2,10 @@ import React, { FC, useState, useMemo } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import {
-  Container, GlobalStyles,
+  Container,
 } from '@mui/material';
 import { Setup, Replay, NotFound } from '@components';
-import { theme, globalStyle, viewState } from '@constants';
+import { theme, viewState } from '@constants';
 
 const App: FC = () => {
   const [view, setView] = useState<ViewState>(viewState.SETUP);
@@ -40,13 +40,13 @@ const App: FC = () => {
   return (
     <>
       <CssBaseline />
-      <GlobalStyles styles={globalStyle} />
       <ThemeProvider theme={theme}>
         <Container sx={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
+          gap: 2,
         }}
         >
           {currentView}

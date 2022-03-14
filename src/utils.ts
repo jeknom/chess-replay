@@ -43,6 +43,14 @@ export const mapPieceIdToVisual = (id: string, alt: string) => {
   }
 };
 
+export const getCurrentHistoryForMove = (history: Move[], currentMove: number) => {
+  let historyCopy = [];
+
+  historyCopy = [...history].reverse().slice(0, currentMove);
+
+  return historyCopy;
+};
+
 export const getBoardWithVisuals = (board: Piece[]) => {
   const boardWithVisuals: PieceWithVisual[] = [];
   for (let i = 0; i < board.length; i += 1) {
@@ -64,7 +72,7 @@ export const getBoardForHistory = (
   currentMove: number,
 ) => {
   const boardClone = [...board];
-  const reversedHistory = [...history].reverse().slice(0, currentMove);
+  const reversedHistory = getCurrentHistoryForMove(history, currentMove);
   for (let h = 0; h < reversedHistory.length; h += 1) {
     const move = reversedHistory[h];
 
@@ -92,7 +100,7 @@ export const getCapturedPiecesForHistory = (
   history: Move[],
   currentMove: number,
 ) => {
-  const historyClone = [...history].reverse().slice(0, currentMove);
+  const historyClone = getCurrentHistoryForMove(history, currentMove);
   const capturedPieces: Piece[] = [];
 
   for (let i = 0; i < historyClone.length; i += 1) {
@@ -131,7 +139,7 @@ export const getPositionForIndex = (index: number, dimensions: number): Pos => (
 });
 
 export const getLatestMoveFromHistory = (history: Move[], currentMove: number) => {
-  const historyClone = [...history].reverse().slice(0, currentMove);
+  const historyClone = getCurrentHistoryForMove(history, currentMove);
 
   return historyClone.length !== 0 ? historyClone[historyClone.length - 1] : null;
 };
