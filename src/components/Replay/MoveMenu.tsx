@@ -17,6 +17,7 @@ const MoveMenu: FC<MoveSelectProps> = ({
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const items = [...moves].map((m, i) => (
     <MoveItem
+      key={`${m.pieceId}-${m.toPos.x}${m.toPos.y}`}
       moveNumber={i + 1}
       move={m}
       isSelected={currentMove === i + 1}

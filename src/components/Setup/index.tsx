@@ -6,8 +6,9 @@ import {
 } from '@mui/material';
 import { isValidGameData } from '@utils';
 import { ChevronRight } from '@mui/icons-material';
-import mockGameData from '../../mock/mock-game.json';
-import LoadingContainer from './LoadingContainer';
+import mockGameData from '../../../mock/mock-game.json';
+import LoadingContainer from '../LoadingContainer';
+import JsonImportDialog from './JsonImportDialog';
 
 interface SetupProps {
   onSetGameData: (data: GameData) => void;
@@ -17,6 +18,7 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
   const [url, setUrl] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isImportDialogOpen, setIsImportDialogOpen] = useState(false);
   const hasError = error !== '' && error !== undefined;
 
   const handleFetchGameData = async () => {
@@ -59,6 +61,10 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
     setUrl(event.target.value);
   };
 
+  const handleOpenImportDialog = () => setIsImportDialogOpen(true);
+
+  const handleCloseImportDialog = () => setIsImportDialogOpen(false);
+
   return (
     <Paper
       sx={{
@@ -97,13 +103,20 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
       </form>
       <Box
         sx={{
+          gap: 2,
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
         }}
       >
         <Button variant='outlined' onClick={handleSetMockGameData}>Demo</Button>
+        <Button variant='outlined' onClick={handleOpenImportDialog}>Import</Button>
       </Box>
+      <JsonImportDialog
+        open={isImportDialogOpen}
+        onClose={handleCloseImportDialog}
+        onSubmitGameData={onSetGameData}
+      />
     </Paper>
   );
 };

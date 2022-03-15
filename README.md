@@ -15,12 +15,13 @@ A react app to replay through a game of chess step by step.
 ## Possible improvements
 
 - Animated chess pieces
-- Add possibility to copy and paste match data without having to do a GET request
 - Match data validation to check for things like illegal moves
 - Improve the setup screen look
 - Add sound effects
 - Improve layout on smaller screens
 - Saving previously replayed matches to local storage and making a system to swap/load them easily
+- Optimize so that the whole board does not have to be rerendered with each update
+- More tests
 
 ## Running locally
 
@@ -30,11 +31,15 @@ A react app to replay through a game of chess step by step.
 
 ## Usage
 
-When you first open the page, you will be directed to setup. On that page, you will need to copy and paste a URL in which the app can find data for the match you would like to replay. Once you have entered the URL, hit enter or click the arrow button, you will be directed to the replay view.
+When you first open the page, you will be directed to setup. On that page, you will have three options:
 
-> If you would like to create your own data and host it somewhere, see the data format in the [mock file](./mock/mock-game.json).
+1. You can enter a URL from which to fetch the match data
+2. You can import JSON directly by clicking the import button
+3. You can click on the demo button if you would just like to see what the app looks like
 
-In the replay view you will have a slider which you can use to slide through all of the moves. Next to the slider, there is a menu button which will open a list of all the moves with extra details.
+> If you would like to create your own data refer to the [mock file](./mock/mock-game.json) to see the format.
+
+After deciding on which data to use, you will be directed to the replay view. In there, you will have a slider which you can use to slide through all of the moves. Next to the slider, there is a menu button which will open a list of all the moves with extra details.
 
 ## Running tests
 
