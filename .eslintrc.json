@@ -31,7 +31,13 @@
         "no-shadow": "off",
         "no-nested-ternary": "off",
         "jsx-quotes": [2, "prefer-single"],
-        "import/extensions": [2, "never"],
+        "import/extensions": [
+            "error",
+            "never",
+            { 
+                "json": "always" 
+            }
+        ],
         "react/jsx-filename-extension": [2, { "extensions": [".tsx", ".jsx"] }],
         "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
         "react/jsx-props-no-spreading": ["off"],

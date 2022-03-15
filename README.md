@@ -32,7 +32,7 @@ A react app to replay through a game of chess step by step.
 
 When you first open the page, you will be directed to setup. On that page, you will need to copy and paste a URL in which the app can find data for the match you would like to replay. Once you have entered the URL, hit enter or click the arrow button, you will be directed to the replay view.
 
-> If you would like to create your own data and host it somewhere, see the data format in the [mock file](./mock/italian-game-data.json).
+> If you would like to create your own data and host it somewhere, see the data format in the [mock file](./mock/mock-game.json).
 
 In the replay view you will have a slider which you can use to slide through all of the moves. Next to the slider, there is a menu button which will open a list of all the moves with extra details.
 

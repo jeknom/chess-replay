@@ -2,10 +2,11 @@ import React, {
   ChangeEvent, FC, FormEvent, useState,
 } from 'react';
 import {
-  IconButton, InputAdornment, InputLabel, Paper, TextField, Typography,
+  IconButton, InputAdornment, InputLabel, Paper, TextField, Typography, Box, Button,
 } from '@mui/material';
 import { isValidGameData } from '@utils';
 import { ChevronRight } from '@mui/icons-material';
+import mockGameData from '../../mock/mock-game.json';
 import LoadingContainer from './LoadingContainer';
 
 interface SetupProps {
@@ -41,6 +42,10 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
     setError('Invalid game data, check that the URL is correct');
   };
 
+  const handleSetMockGameData = () => {
+    onSetGameData(mockGameData);
+  };
+
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await handleFetchGameData();
@@ -62,7 +67,6 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
         flexDirection: 'column',
         alignItems: 'center',
         width: 350,
-        height: 300,
         padding: 2,
         gap: 2,
       }}
@@ -91,6 +95,15 @@ const Setup: FC<SetupProps> = ({ onSetGameData }) => {
           }}
         />
       </form>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        <Button variant='outlined' onClick={handleSetMockGameData}>Demo</Button>
+      </Box>
     </Paper>
   );
 };

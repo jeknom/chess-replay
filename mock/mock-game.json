@@ -1,0 +1,1279 @@
+{
+  "name": "Wijk aan Zee 1999",
+  "size": 8,
+  "players": {
+    "white": "Kasparov",
+    "black": "Topalov"
+  },
+  "board": [
+    {
+      "id": "wq",
+      "pos": {
+        "x": 0,
+        "y": 1
+      },
+      "type": "queen",
+      "team": "white"
+    },
+    {
+      "id": "bp1",
+      "pos": {
+        "x": 7,
+        "y": 1
+      },
+      "type": "pawn",
+      "team": "black"
+    },
+    {
+      "id": "bp2",
+      "pos": {
+        "x": 6,
+        "y": 2
+      },
+      "type": "pawn",
+      "team": "black"
+    },
+    {
+      "id": "bp3",
+      "pos": {
+        "x": 5,
+        "y": 3
+      },
+      "type": "pawn",
+      "team": "black"
+    },
+    {
+      "id": "wp1",
+      "pos": {
+        "x": 5,
+        "y": 4
+      },
+      "type": "pawn",
+      "team": "white"
+    },
+    {
+      "id": "wp2",
+      "pos": {
+        "x": 6,
+        "y": 5
+      },
+      "type": "pawn",
+      "team": "white"
+    },
+    {
+      "id": "wp3",
+      "pos": {
+        "x": 7,
+        "y": 6
+      },
+      "type": "pawn",
+      "team": "white"
+    },
+    {
+      "id": "bp4",
+      "pos": {
+        "x": 2,
+        "y": 5
+      },
+      "type": "pawn",
+      "team": "black"
+    },
+    {
+      "id": "br1",
+      "pos": {
+        "x": 3,
+        "y": 6
+      },
+      "type": "rook",
+      "team": "black"
+    },
+    {
+      "id": "wk",
+      "pos": {
+        "x": 2,
+        "y": 7
+      },
+      "type": "king",
+      "team": "white"
+    },
+    {
+      "id": "bk",
+      "pos": {
+        "x": 4,
+        "y": 7
+      },
+      "type": "king",
+      "team": "black"
+    }
+  ],
+  "history": [
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 0,
+        "y": 4
+      },
+      "toPos": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "br1",
+      "fromPos": {
+        "x": 3,
+        "y": 5
+      },
+      "toPos": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "pieceId": "wk",
+      "fromPos": {
+        "x": 1,
+        "y": 7
+      },
+      "toPos": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bp3",
+      "fromPos": {
+        "x": 5,
+        "y": 1
+      },
+      "toPos": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "wp1",
+      "fromPos": {
+        "x": 5,
+        "y": 5
+      },
+      "toPos": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 3,
+        "y": 7
+      },
+      "toPos": {
+        "x": 4,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 0,
+        "y": 0
+      },
+      "toPos": {
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "bp4",
+      "fromPos": {
+        "x": 2,
+        "y": 4
+      },
+      "toPos": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 7,
+        "y": 0
+      },
+      "toPos": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "pieceId": "br1",
+      "fromPos": {
+        "x": 3,
+        "y": 1
+      },
+      "toPos": {
+        "x": 3,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 1,
+        "y": 6
+      },
+      "toPos": {
+        "x": 7,
+        "y": 0
+      },
+      "remove": {
+        "id": "br2",
+        "pos": {
+          "x": 7,
+          "y": 0
+        },
+        "type": "rook",
+        "team": "black"
+      }
+    },
+    {
+      "pieceId": "bp4",
+      "fromPos": {
+        "x": 1,
+        "y": 3
+      },
+      "toPos": {
+        "x": 2,
+        "y": 4
+      },
+      "remove": {
+        "id": "wb1",
+        "pos": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "bishop",
+        "team": "white"
+      }
+    },
+    {
+      "pieceId": "wb1",
+      "fromPos": {
+        "x": 5,
+        "y": 7
+      },
+      "toPos": {
+        "x": 2,
+        "y": 4
+      },
+      "remove": {
+        "id": "bq",
+        "pos": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "queen",
+        "team": "black"
+      }
+    },
+    {
+      "pieceId": "br1",
+      "fromPos": {
+        "x": 3,
+        "y": 6
+      },
+      "toPos": {
+        "x": 3,
+        "y": 1
+      },
+      "remove": {
+        "id": "wr1",
+        "pos": {
+          "x": 3,
+          "y": 1
+        },
+        "type": "rook",
+        "team": "white"
+      }
+    },
+    {
+      "pieceId": "wr1",
+      "fromPos": {
+        "x": 1,
+        "y": 1
+      },
+      "toPos": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "br1",
+      "fromPos": {
+        "x": 3,
+        "y": 0
+      },
+      "toPos": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "pieceId": "wb1",
+      "fromPos": {
+        "x": 7,
+        "y": 5
+      },
+      "toPos": {
+        "x": 5,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 3,
+        "y": 6
+      },
+      "toPos": {
+        "x": 3,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 1,
+        "y": 6
+      },
+      "toPos": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 2,
+        "y": 5
+      },
+      "toPos": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 0,
+        "y": 2
+      },
+      "toPos": {
+        "x": 0,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 1,
+        "y": 4
+      },
+      "toPos": {
+        "x": 2,
+        "y": 5
+      },
+      "remove": {
+        "id": "wp4",
+        "pos": {
+          "x": 2,
+          "y": 5
+        },
+        "team": "white",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "wp4",
+      "fromPos": {
+        "x": 2,
+        "y": 6
+      },
+      "toPos": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 0,
+        "y": 5
+      },
+      "toPos": {
+        "x": 1,
+        "y": 4
+      },
+      "remove": {
+        "id": "wp5",
+        "pos": {
+          "x": 1,
+          "y": 4
+        },
+        "team": "white",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 5,
+        "y": 2
+      },
+      "toPos": {
+        "x": 0,
+        "y": 2
+      },
+      "remove": {
+        "id": "bp5",
+        "pos": {
+          "x": 0,
+          "y": 2
+        },
+        "team": "black",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 0,
+        "y": 4
+      },
+      "toPos": {
+        "x": 0,
+        "y": 5
+      },
+      "remove": {
+        "id": "wp6",
+        "pos": {
+          "x": 0,
+          "y": 5
+        },
+        "team": "white",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 2,
+        "y": 5
+      },
+      "toPos": {
+        "x": 5,
+        "y": 2
+      },
+      "remove": {
+        "id": "bn1",
+        "pos": {
+          "x": 5,
+          "y": 2
+        },
+        "team": "black",
+        "type": "knight"
+      }
+    },
+    {
+      "pieceId": "bq",
+      "fromPos": {
+        "x": 3,
+        "y": 3
+      },
+      "toPos": {
+        "x": 2,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "wr1",
+      "fromPos": {
+        "x": 0,
+        "y": 1
+      },
+      "toPos": {
+        "x": 1,
+        "y": 1
+      },
+      "remove": {
+        "id": "bb1",
+        "pos": {
+          "x": 1,
+          "y": 1
+        },
+        "team": "black",
+        "type": "bishop"
+      }
+    },
+    {
+      "pieceId": "bb1",
+      "fromPos": {
+        "x": 0,
+        "y": 0
+      },
+      "toPos": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wr1",
+      "fromPos": {
+        "x": 4,
+        "y": 1
+      },
+      "toPos": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "bq",
+      "fromPos": {
+        "x": 3,
+        "y": 2
+      },
+      "toPos": {
+        "x": 3,
+        "y": 3
+      },
+      "remove": {
+        "id": "wp7",
+        "pos": {
+          "x": 3,
+          "y": 3
+        },
+        "team": "white",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 3,
+        "y": 4
+      },
+      "toPos": {
+        "x": 3,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 0,
+        "y": 3
+      },
+      "toPos": {
+        "x": 0,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "wp5",
+      "fromPos": {
+        "x": 1,
+        "y": 6
+      },
+      "toPos": {
+        "x": 1,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 1,
+        "y": 2
+      },
+      "toPos": {
+        "x": 0,
+        "y": 3
+      },
+      "remove": {
+        "id": "wn1",
+        "pos": {
+          "x": 0,
+          "y": 3
+        },
+        "team": "white",
+        "type": "knight"
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 5,
+        "y": 4
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      },
+      "remove": {
+        "id": "bp6",
+        "pos": {
+          "x": 3,
+          "y": 4
+        },
+        "team": "black",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 0,
+        "y": 1
+      },
+      "toPos": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wr1",
+      "fromPos": {
+        "x": 4,
+        "y": 7
+      },
+      "toPos": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "bp6",
+      "fromPos": {
+        "x": 2,
+        "y": 3
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      },
+      "remove": {
+        "id": "wr2",
+        "pos": {
+          "x": 3,
+          "y": 4
+        },
+        "team": "white",
+        "type": "rook"
+      }
+    },
+    {
+      "pieceId": "wr2",
+      "fromPos": {
+        "x": 3,
+        "y": 7
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      },
+      "remove": {
+        "id": "bp7",
+        "pos": {
+          "x": 3,
+          "y": 4
+        },
+        "team": "black",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "bq",
+      "fromPos": {
+        "x": 4,
+        "y": 1
+      },
+      "toPos": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wp7",
+      "fromPos": {
+        "x": 4,
+        "y": 4
+      },
+      "toPos": {
+        "x": 3,
+        "y": 3
+      },
+      "remove": {
+        "id": "bn2",
+        "pos": {
+          "x": 3,
+          "y": 3
+        },
+        "team": "black",
+        "type": "knight"
+      }
+    },
+    {
+      "pieceId": "bn2",
+      "fromPos": {
+        "x": 1,
+        "y": 2
+      },
+      "toPos": {
+        "x": 3,
+        "y": 3
+      },
+      "remove": {
+        "id": "wn2",
+        "pos": {
+          "x": 3,
+          "y": 3
+        },
+        "team": "white",
+        "type": "knight"
+      }
+    },
+    {
+      "pieceId": "wn2",
+      "fromPos": {
+        "x": 2,
+        "y": 5
+      },
+      "toPos": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "bp7",
+      "fromPos": {
+        "x": 3,
+        "y": 3
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "wr1",
+      "fromPos": {
+        "x": 7,
+        "y": 7
+      },
+      "toPos": {
+        "x": 4,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 1,
+        "y": 0
+      },
+      "toPos": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 7,
+        "y": 2
+      },
+      "toPos": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "bp7",
+      "fromPos": {
+        "x": 3,
+        "y": 2
+      },
+      "toPos": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "wb1",
+      "fromPos": {
+        "x": 5,
+        "y": 7
+      },
+      "toPos": {
+        "x": 7,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bb1",
+      "fromPos": {
+        "x": 1,
+        "y": 1
+      },
+      "toPos": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "pieceId": "wn1",
+      "fromPos": {
+        "x": 1,
+        "y": 5
+      },
+      "toPos": {
+        "x": 0,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 2,
+        "y": 0
+      },
+      "toPos": {
+        "x": 1,
+        "y": 0
+      }
+    },
+    {
+      "pieceId": "wp2",
+      "fromPos": {
+        "x": 6,
+        "y": 6
+      },
+      "toPos": {
+        "x": 6,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bn2",
+      "fromPos": {
+        "x": 3,
+        "y": 1
+      },
+      "toPos": {
+        "x": 1,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wr2",
+      "fromPos": {
+        "x": 3,
+        "y": 4
+      },
+      "toPos": {
+        "x": 3,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bp6",
+      "fromPos": {
+        "x": 2,
+        "y": 2
+      },
+      "toPos": {
+        "x": 2,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "wr2",
+      "fromPos": {
+        "x": 3,
+        "y": 7
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      },
+      "remove": {
+        "id": "bp8",
+        "pos": {
+          "x": 3,
+          "y": 4
+        },
+        "team": "black",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "bp8",
+      "fromPos": {
+        "x": 4,
+        "y": 3
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      },
+      "remove": {
+        "id": "wp8",
+        "pos": {
+          "x": 3,
+          "y": 4
+        },
+        "team": "white",
+        "type": "pawn"
+      }
+    },
+    {
+      "pieceId": "wn1",
+      "fromPos": {
+        "x": 2,
+        "y": 7
+      },
+      "toPos": {
+        "x": 1,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bk",
+      "fromPos": {
+        "x": 4,
+        "y": 0
+      },
+      "toPos": {
+        "x": 2,
+        "y": 0
+      }
+    },
+    {
+      "pieceId": "br1",
+      "fromPos": {
+        "x": 0,
+        "y": 0
+      },
+      "toPos": {
+        "x": 3,
+        "y": 0
+      }
+    },
+    {
+      "pieceId": "wn1",
+      "fromPos": {
+        "x": 4,
+        "y": 6
+      },
+      "toPos": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bp5",
+      "fromPos": {
+        "x": 0,
+        "y": 1
+      },
+      "toPos": {
+        "x": 0,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wk",
+      "fromPos": {
+        "x": 2,
+        "y": 7
+      },
+      "toPos": {
+        "x": 1,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bq",
+      "fromPos": {
+        "x": 3,
+        "y": 0
+      },
+      "toPos": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wk",
+      "fromPos": {
+        "x": 4,
+        "y": 7
+      },
+      "toPos": {
+        "x": 2,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "wr2",
+      "fromPos": {
+        "x": 0,
+        "y": 7
+      },
+      "toPos": {
+        "x": 3,
+        "y": 7
+      }
+    },
+    {
+      "pieceId": "bp8",
+      "fromPos": {
+        "x": 4,
+        "y": 1
+      },
+      "toPos": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "wp6",
+      "fromPos": {
+        "x": 0,
+        "y": 6
+      },
+      "toPos": {
+        "x": 0,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bb1",
+      "fromPos": {
+        "x": 2,
+        "y": 0
+      },
+      "toPos": {
+        "x": 1,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 3,
+        "y": 6
+      },
+      "toPos": {
+        "x": 7,
+        "y": 2
+      },
+      "remove": {
+        "id": "bb2",
+        "pos": {
+          "x": 7,
+          "y": 2
+        },
+        "team": "black",
+        "type": "bishop"
+      }
+    },
+    {
+      "pieceId": "bb2",
+      "fromPos": {
+        "x": 6,
+        "y": 1
+      },
+      "toPos": {
+        "x": 7,
+        "y": 2
+      },
+      "remove": {
+        "id": "wb2",
+        "pos": {
+          "x": 7,
+          "y": 2
+        },
+        "team": "white",
+        "type": "bishop"
+      }
+    },
+    {
+      "pieceId": "wb2",
+      "fromPos": {
+        "x": 4,
+        "y": 5
+      },
+      "toPos": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "bn2",
+      "fromPos": {
+        "x": 1,
+        "y": 0
+      },
+      "toPos": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wn2",
+      "fromPos": {
+        "x": 6,
+        "y": 7
+      },
+      "toPos": {
+        "x": 4,
+        "y": 6
+      }
+    },
+    {
+      "pieceId": "bp4",
+      "fromPos": {
+        "x": 1,
+        "y": 1
+      },
+      "toPos": {
+        "x": 1,
+        "y": 3
+      }
+    },
+    {
+      "pieceId": "wp1",
+      "fromPos": {
+        "x": 5,
+        "y": 6
+      },
+      "toPos": {
+        "x": 5,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bp6",
+      "fromPos": {
+        "x": 2,
+        "y": 1
+      },
+      "toPos": {
+        "x": 2,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wq",
+      "fromPos": {
+        "x": 3,
+        "y": 7
+      },
+      "toPos": {
+        "x": 3,
+        "y": 6
+      }
+    },
+    {
+      "pieceId": "bb2",
+      "fromPos": {
+        "x": 5,
+        "y": 0
+      },
+      "toPos": {
+        "x": 6,
+        "y": 1
+      }
+    },
+    {
+      "pieceId": "wb2",
+      "fromPos": {
+        "x": 2,
+        "y": 7
+      },
+      "toPos": {
+        "x": 4,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bp2",
+      "fromPos": {
+        "x": 6,
+        "y": 1
+      },
+      "toPos": {
+        "x": 6,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wn1",
+      "fromPos": {
+        "x": 1,
+        "y": 7
+      },
+      "toPos": {
+        "x": 2,
+        "y": 5
+      }
+    },
+    {
+      "pieceId": "bn1",
+      "fromPos": {
+        "x": 6,
+        "y": 0
+      },
+      "toPos": {
+        "x": 5,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wp8",
+      "fromPos": {
+        "x": 3,
+        "y": 6
+      },
+      "toPos": {
+        "x": 3,
+        "y": 4
+      }
+    },
+    {
+      "pieceId": "bp7",
+      "fromPos": {
+        "x": 3,
+        "y": 1
+      },
+      "toPos": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "pieceId": "wp7",
+      "fromPos": {
+        "x": 4,
+        "y": 6
+      },
+      "toPos": {
+        "x": 4,
+        "y": 4
+      }
+    }
+  ]
+}

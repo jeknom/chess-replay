@@ -1,13 +1,14 @@
 import { getBoardForHistory, getBoardWithVisuals, getBoardAsIfGameStarted } from '@utils';
-import italianGameData from '@mock/italian-game-data.json';
+import mockGameData from '../mock/mock-game.json';
 
 test('gets final board state with expected piece positions', () => {
-  const { board, history } = (italianGameData as GameData);
-  const boardWithVisuals = getBoardWithVisuals(getBoardAsIfGameStarted(board, history));
-  const finishedGameBoard = getBoardForHistory(boardWithVisuals, history, history.length);
+  const { board, history } = (mockGameData as GameData);
+  const boardAsIfGameStarted = getBoardAsIfGameStarted(board, history);
+  const boardWithVisuals = getBoardWithVisuals(boardAsIfGameStarted);
+  const finishedGameBoard = getBoardForHistory(boardWithVisuals, history.reverse(), history.length);
 
-  for (let p = 0; p < board.length; p += 1) {
-    const piece = board[p];
+  for (let p = 0; p < finishedGameBoard.length; p += 1) {
+    const piece = finishedGameBoard[p];
     let lastPosition = piece.pos;
     for (let h = 0; h < history.length; h += 1) {
       const move = history[h];
@@ -16,10 +17,10 @@ test('gets final board state with expected piece positions', () => {
       }
     }
 
-    const finishedPosition = finishedGameBoard.find((p) => p.id === piece.id)?.pos;
+    const finishedPosition = board.find((finished) => finished.id === piece.id);
     if (finishedPosition) {
-      expect(lastPosition.x).toBe(finishedPosition.x);
-      expect(lastPosition.y).toBe(finishedPosition.y);
+      expect(lastPosition.x).toBe(finishedPosition.pos.x);
+      expect(lastPosition.y).toBe(finishedPosition.pos.y);
     } else {
       fail('Piece was not found in the finished board!');
     }

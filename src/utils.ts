@@ -52,9 +52,10 @@ export const getCurrentHistoryForMove = (history: Move[], currentMove: number) =
 };
 
 export const getBoardWithVisuals = (board: Piece[]) => {
+  const boardClone = [...board];
   const boardWithVisuals: PieceWithVisual[] = [];
-  for (let i = 0; i < board.length; i += 1) {
-    const piece = board[i];
+  for (let i = 0; i < boardClone.length; i += 1) {
+    const piece = boardClone[i];
     boardWithVisuals.push({
       ...piece,
       visual: mapPieceIdToVisual(piece.id, piece.type),
@@ -115,7 +116,7 @@ export const getCapturedPiecesForHistory = (
 };
 
 export const getBoardAsIfGameStarted = (board: Piece[], history: Move[]) => {
-  const boardClone = [...board];
+  const boardClone = JSON.parse(JSON.stringify(board)) as Piece[];
 
   for (let h = 0; h < history.length; h += 1) {
     const move = history[h];
